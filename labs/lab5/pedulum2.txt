@@ -1,0 +1,11 @@
+function xdot = pendulum(t,x);
+
+%Definition of parameter
+
+l=1    % string lenth in [m]
+g=9.81 % gravitation in [m/s^2]
+
+% ODE (equation of motion of a pendulum as a system of two first order
+% ODEs)
+
+xdot=[x(2); -g/l*sin(x(1))]
