@@ -1,0 +1,19 @@
+%Main program
+
+
+tspan=[0 20]
+x0=[1;0]
+[t,x]=ode45('pendulum', tspan,x0)
+
+%postprocessing
+
+phi=x(:,1); 
+phidot=x(:,2);
+
+plot(t,phi,t,phidot);
+xlabel('t'), ylabel('phi and phidot')
+
+figure(2)
+plot(phi,phidot)
+xlabel('phi'), ylabel('phidot')
+title('Phase Plane Plot')
